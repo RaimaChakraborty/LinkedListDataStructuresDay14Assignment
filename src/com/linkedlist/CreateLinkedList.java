@@ -15,15 +15,18 @@ class Node {
         return (head == null);
     }
 
-    public void insertLast(int data) {
-        Node current = head;
-        while (current.next != null) {
-            current = current.next; // we'll loop until current.next is null
-        }
+    public void insert(int data) {
         Node newNode = new Node();
         newNode.data = data;
-        current.next = newNode;
+        newNode.next = head;
+        head = newNode;
     }
+    public Node deleteFirst() {
+        Node temp = head;
+        head = head.next;
+        return temp;
+    }
+
 
     // For printing Linked List
     public void printLinkedList() {

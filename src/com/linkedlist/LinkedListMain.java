@@ -4,10 +4,12 @@ public class LinkedListMain {
 
     public static void main(String args[]) {
         CreateLinkedList myLinkedlist = new CreateLinkedList();
-        System.out.println("Create a linked list using append method: ");
-        myLinkedlist.insertLast(56);
-        myLinkedlist.insertLast(30);
-        myLinkedlist.insertLast(70);
+
+        myLinkedlist.insert(56);
+        myLinkedlist.insert(30);
+        myLinkedlist.insert(70);
+        System.out.println("After deleting first element: ");
+        System.out.println(myLinkedlist.deleteFirst());
 
 
         Node node = new Node();
