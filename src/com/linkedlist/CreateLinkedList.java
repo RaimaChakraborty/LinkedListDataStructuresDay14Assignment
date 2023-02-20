@@ -23,6 +23,13 @@ class Node {
         return data;
     }
 
+    public void append(int data)
+    { Node newNode = new Node();
+        newNode.data = data;
+        newNode.next = head;
+        head = newNode;
+    }
+
     // For printing Linked List
     public void printLinkedList() {
         System.out.println("Printing LinkedList (head --> last) ");
