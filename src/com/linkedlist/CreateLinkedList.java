@@ -21,13 +21,17 @@ class Node {
         newNode.next = head;
         head = newNode;
     }
-    public Node deleteFirst() {
+
+
+    public Node deleteAfter(Node after) {
         Node temp = head;
-        head = head.next;
-        return temp;
+        while (temp.next != null && temp.data != after.data) {
+            temp = temp.next;
+        }
+        if (temp.next != null)
+            temp.next = temp.next.next;
+        return temp.next;
     }
-
-
     // For printing Linked List
     public void printLinkedList() {
         System.out.println("Printing LinkedList (head --> last) ");
