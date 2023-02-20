@@ -1,4 +1,5 @@
 package com.linkedlist;
+import java.lang.*;
 
 class Node {
     public int data;
@@ -14,20 +15,14 @@ class Node {
         return (head == null);
     }
 
-    // used to insert a node at the start of linked list
-    public int insertFirst(int data) {
+    public void insertLast(int data) {
+        Node current = head;
+        while (current.next != null) {
+            current = current.next; // we'll loop until current.next is null
+        }
         Node newNode = new Node();
         newNode.data = data;
-        newNode.next = head;
-        head = newNode;
-        return data;
-    }
-
-    public void append(int data)
-    { Node newNode = new Node();
-        newNode.data = data;
-        newNode.next = head;
-        head = newNode;
+        current.next = newNode;
     }
 
     // For printing Linked List
