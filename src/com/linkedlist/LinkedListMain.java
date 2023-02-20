@@ -4,9 +4,11 @@ public class LinkedListMain {
 
     public static void main(String args[]) {
         CreateLinkedList myLinkedlist = new CreateLinkedList();
-        myLinkedlist.insertFirst(56);
+        System.out.println("Create a linked list using add method");
+        System.out.println( myLinkedlist.insertFirst(56));
         myLinkedlist.insertFirst(30);
         myLinkedlist.insertFirst(70);
+
 
         Node node = new Node();
         node.data = 1;

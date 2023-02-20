@@ -15,11 +15,12 @@ class Node {
     }
 
     // used to insert a node at the start of linked list
-    public void insertFirst(int data) {
+    public int insertFirst(int data) {
         Node newNode = new Node();
         newNode.data = data;
         newNode.next = head;
         head = newNode;
+        return data;
     }
 
     // For printing Linked List
